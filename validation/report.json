@@ -1,0 +1,120 @@
+{
+  "implementation": "2026 paper-based four-current model, alongside preserved exploratory sources",
+  "environment": {
+    "python": "3.11.5",
+    "numpy": "1.26.4",
+    "scipy": "1.15.1"
+  },
+  "fixed_trial_mesh_sequence": [
+    {
+      "mesh": 24,
+      "energy_per_site": -0.21963782845219318
+    },
+    {
+      "mesh": 40,
+      "energy_per_site": -0.21976935743342066
+    },
+    {
+      "mesh": 80,
+      "energy_per_site": -0.2197657143163578
+    },
+    {
+      "mesh": 120,
+      "energy_per_site": -0.2197634707564878
+    }
+  ],
+  "fixed_trial_currents": [
+    0.12,
+    -0.21,
+    0.33,
+    -0.07
+  ],
+  "fixed_trial_t": 0.25,
+  "fixed_trial_filling": 0.37,
+  "half_filled_free_lattice": {
+    "mesh": 120,
+    "t": 0.3,
+    "continuum_energy": -0.24317084074161066,
+    "computed_energy": -0.24314307058009693,
+    "absolute_error": 2.7770161513729352e-05
+  },
+  "staggered_current_trial_t0": {
+    "mesh": 120,
+    "currents": [
+      0.4052847345693511,
+      -0.4052847345693511,
+      0.4052847345693511,
+      -0.4052847345693511
+    ],
+    "continuum_trial_energy": -0.1642557160749494,
+    "computed_energy": -0.16421819999982257,
+    "absolute_error": 3.7516075126836634e-05
+  },
+  "bounded_optimization_example": {
+    "currents": [
+      -0.7077568031604099,
+      0.18174128393404862,
+      -0.19037849912966345,
+      0.08802905101768724
+    ],
+    "energy_per_site": -0.22687849924055578,
+    "electronic_energy_per_site": -0.3713641676055002,
+    "current_cost_per_site": 0.1444856683649444,
+    "filling": 0.4,
+    "weighted_occupied_states": 230.4,
+    "chemical_potential": -0.5643331440169518,
+    "zero_current_energy": -0.15816336804942513,
+    "t": 0.2,
+    "interaction_V": 1.0,
+    "next_nearest_hopping": 0.0,
+    "mesh": 24,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "annealing_maxiter": 32,
+    "current_bound": 1.0,
+    "near_search_boundary": false,
+    "trials": [
+      {
+        "seed": 0,
+        "energy": -0.22687849910977975,
+        "local_success": true,
+        "local_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "currents": [
+          0.1903776084507305,
+          -0.1817127921982864,
+          0.7077576219746212,
+          -0.08804536177973174
+        ]
+      },
+      {
+        "seed": 1,
+        "energy": -0.22687849924055578,
+        "local_success": true,
+        "local_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "currents": [
+          -0.7077568031604099,
+          0.18174128393404862,
+          -0.19037849912966345,
+          0.08802905101768724
+        ]
+      },
+      {
+        "seed": 2,
+        "energy": -0.22662572185584753,
+        "local_success": true,
+        "local_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "currents": [
+          -0.6920474360337973,
+          0.1605847530118174,
+          -0.2633608068389163,
+          0.04379689762428114
+        ]
+      }
+    ]
+  },
+  "scope": "No full phase-diagram rerun; no CDW competition; fixed-trial convergence is not optimized phase-boundary convergence. Stochastic search is not a certificate of a global minimum.",
+  "all_checks_passed": true
+}
