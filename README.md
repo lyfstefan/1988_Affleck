@@ -37,9 +37,8 @@ $J=1$; bond phases are in radians. Optimization combines dual annealing
 with local L-BFGS-B minimization.
 
 The displayed square flux is
-$\Phi=|{-\theta_1+\theta_2-\theta_3+\theta_4}|$, with
-$\theta_i=\arg(t+\chi_i e^{-i\phi_i})$. The plotting routine retains this
-expression without reducing it modulo $2\pi$.
+$\Phi\equiv-\theta_1+\theta_2-\theta_3+\theta_4\pmod{2\pi}$, with
+$\theta_i=\arg(t+\chi_i e^{-i\phi_i})$. The figures display $\Phi/\pi$ in $[0,2)$ using a cyclic color scale.
 
 ## Installation and saved figures
 

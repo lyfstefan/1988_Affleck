@@ -13,6 +13,15 @@ PHASE_NAMES = ["Uniform", "Flux", "Kite", "Peierls", "Stripy", "Other"]
 PHASE_COLORS = [C[key] for key in ["light", "red", "blue", "yellow", "sky", "black"]]
 
 
+def flux_mod_2pi(flux):
+    """Oriented flux in [0, 2 pi), with 1e-10 rad endpoint roundoff removed."""
+    value = np.remainder(flux, 2 * np.pi)
+    endpoint = np.isclose(value, 0, atol=1e-10, rtol=0) | np.isclose(
+        value, 2 * np.pi, atol=1e-10, rtol=0
+    )
+    return np.where(endpoint, 0.0, value)
+
+
 def _finish(fig, folder, name, *, legend_fontsize=None):
     destination = Path(folder) / name
     save(fig, destination, legend_fontsize=legend_fontsize)
@@ -28,7 +37,7 @@ def plot_phase_diagram(
     *,
     fillings=None,
     hoppings=None,
-    title="Phase diagram",
+    title="",
 ):
     """Display supplied categories without classifying or smoothing any cell."""
     apply_style()
@@ -140,18 +149,28 @@ def plot_flux_square(
     timestamp=None,
     folder="results/figs",
 ):
-    """Retain the original flux expression and its absence of branch wrapping."""
+    """Plot the oriented plaquette flux modulo 2 pi; stored arrays are untouched."""
     apply_style()
     fillings, hoppings, values = _grid(data, SITE_N)
     chis, phis = values[:, :, :4], values[:, :, 4:8]
     theta = np.angle(hoppings[:, None, None] + chis * np.exp(-1j * phis))
-    flux = np.abs(-theta[:, :, 0] + theta[:, :, 1] - theta[:, :, 2] + theta[:, :, 3])
+    flux = (
+        flux_mod_2pi(-theta[:, :, 0] + theta[:, :, 1] - theta[:, :, 2] + theta[:, :, 3])
+        / np.pi
+    )
     fig, ax = plt.subplots(figsize=(width(), width()), layout="constrained")
     im = ax.pcolormesh(
-        fillings, hoppings, flux, shading="nearest", cmap="Blues", rasterized=True
+        fillings,
+        hoppings,
+        flux,
+        shading="nearest",
+        cmap="twilight",
+        vmin=0,
+        vmax=2,
+        rasterized=True,
     )
-    ax.set(xlabel=r"$\nu$", ylabel=r"$t/J$", title="Plaquette flux")
-    panel_colorbar(fig, ax, im, r"$\Phi$")
+    ax.set(xlabel=r"$\nu$", ylabel=r"$t/J$", title="")
+    panel_colorbar(fig, ax, im, r"$\Phi/\pi$")
     return _finish(
         fig, folder, "flux_square_" + (timestamp or time.strftime("%Y%m%d_%H%M%S"))
     )

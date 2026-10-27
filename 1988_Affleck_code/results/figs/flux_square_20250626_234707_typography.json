@@ -8,17 +8,17 @@
   "colorbar_ticks_pt": 9,
   "annotations_pt": 9,
   "legends_pt": 9,
-  "page_width_cm": 4.415202212941654,
-  "page_height_cm": 4.415202212941654,
+  "page_width_cm": 4.540844751284991,
+  "page_height_cm": 4.540844751284991,
   "font_family": "Computer Modern Roman",
   "math_font_family": "Computer Modern Math Italic",
   "data_frames": [
     {
       "bounds_figure_fraction": [
-        0.2575846140662004,
-        0.26522374597240866,
-        0.8238100958056562,
-        0.8314492277118646
+        0.25045739732083433,
+        0.2664693715082387,
+        0.8010157486700051,
+        0.8170277228574094
       ],
       "width_cm": 2.5,
       "height_cm": 2.5
@@ -27,24 +27,24 @@
   "colorbars": [
     {
       "parent_bounds_figure_fraction": [
-        0.2575846140662004,
-        0.26522374597240866,
-        0.8238100958056562,
-        0.8314492277118646
+        0.25045739732083433,
+        0.2664693715082387,
+        0.8010157486700051,
+        0.8170277228574094
       ],
       "bounds_figure_fraction": [
-        0.8492902424839317,
-        0.2652237459724087,
-        0.8747703891622072,
-        0.6049590350160823
+        0.8257908744807176,
+        0.2664693715082387,
+        0.8505660002914304,
+        0.5968043823177411
       ],
-      "height_fraction_of_frame": 0.6000000000000001,
-      "width_fraction_of_frame": 0.04499999999999993,
-      "bottom_offset_cm": 2.450929577591884e-16,
-      "label": "$\\Phi$",
+      "height_fraction_of_frame": 0.6,
+      "width_fraction_of_frame": 0.04500000000000008,
+      "bottom_offset_cm": 0.0,
+      "label": "$\\Phi/\\pi$",
       "label_position": "above",
       "shared": false,
-      "label_bottom_clearance_cm": 0.07960564549605648,
+      "label_bottom_clearance_cm": 0.06203265532032607,
       "scientific_exponent": 0
     }
   ],

@@ -7,7 +7,7 @@ import numpy as np
 
 CODE = Path(__file__).resolve().parents[1] / "1988_Affleck_code"
 sys.path.insert(0, str(CODE))
-from plot_utils import _grid
+from plot_utils import _grid, flux_mod_2pi
 from replot_saved import SCANS, recover
 
 
@@ -30,6 +30,15 @@ class SavedPlotData(unittest.TestCase):
                 ]
                 np.testing.assert_array_equal(a[2][iy, ix], row[0, 2:])
             np.testing.assert_array_equal(data, before)
+
+    def test_flux_keeps_orientation_before_modulo(self):
+        raw = np.array([-np.pi / 2, np.pi / 2, 2 * np.pi, -4 * np.pi, -1e-12])
+        wrapped = flux_mod_2pi(raw)
+        np.testing.assert_allclose(
+            wrapped, [3 * np.pi / 2, np.pi / 2, 0, 0, 0], atol=1e-10
+        )
+        np.testing.assert_allclose(np.exp(1j * wrapped), np.exp(1j * raw), atol=1e-10)
+        self.assertTrue(np.all((wrapped >= 0) & (wrapped < 2 * np.pi)))
 
     def test_duplicate_scan_coordinate_is_rejected(self):
         data = np.load(

@@ -30,7 +30,7 @@ SCANS = {
         "site_n": 2500,
         "source": "phase_diagram_20250628_175145.png",
         "bounds": [209, 213, 908, 912],
-        "title": r"Phase diagram: $t'/t=0.2$",
+        "title": r"$t'/t=0.2$",
     },
 }
 ORIGINAL_PALETTE = np.array(
@@ -124,7 +124,7 @@ def main():
             folder=base / "figs",
             fillings=particles / spec["site_n"],
             hoppings=hoppings,
-            title=spec.get("title", "Phase diagram"),
+            title=spec.get("title", ""),
         )
         plot_order_parameters(
             data, timestamp, folder=base / "figs", site_n=spec["site_n"]
