@@ -1,0 +1,11 @@
+{
+  "scope": "File organization only; file contents unchanged",
+  "moves": {
+    "1988_Affleck_code/ README.md": "1988_Affleck_code/README.md",
+    "phasediagram_data_20250626_224949.npy": "1988_Affleck_code/results/data/scan_20250626_224949.npy",
+    "phasediagram_data_20250628_175145.npy": "1988_Affleck_code/results/data/scan_20250628_175145.npy",
+    "phasediagram_data_20250626_224949.npy.png": "1988_Affleck_code/results/figs/phase_diagram_20250626_224949.png",
+    "phasediagram_data_20250628_175145.npy.png": "1988_Affleck_code/results/figs/phase_diagram_20250628_175145.png",
+    "1988_Affleck_code/results/data/data_20250626_234707.npy": "1988_Affleck_code/results/data/scan_20250626_234707.npy"
+  }
+}
