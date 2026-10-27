@@ -1,0 +1,54 @@
+{
+  "template": "v1_compact_square_frames_latex",
+  "text_engine": "latex",
+  "text_usetex": true,
+  "frame_pt": 1.0,
+  "axis_labels_pt": 10,
+  "ticks_pt": 9,
+  "colorbar_ticks_pt": 9,
+  "annotations_pt": 9,
+  "legends_pt": 9,
+  "page_width_cm": 4.415202212941654,
+  "page_height_cm": 4.415202212941654,
+  "font_family": "Computer Modern Roman",
+  "math_font_family": "Computer Modern Math Italic",
+  "data_frames": [
+    {
+      "bounds_figure_fraction": [
+        0.2575846140662004,
+        0.26522374597240866,
+        0.8238100958056562,
+        0.8314492277118646
+      ],
+      "width_cm": 2.5,
+      "height_cm": 2.5
+    }
+  ],
+  "colorbars": [
+    {
+      "parent_bounds_figure_fraction": [
+        0.2575846140662004,
+        0.26522374597240866,
+        0.8238100958056562,
+        0.8314492277118646
+      ],
+      "bounds_figure_fraction": [
+        0.8492902424839317,
+        0.2652237459724087,
+        0.8747703891622072,
+        0.6049590350160823
+      ],
+      "height_fraction_of_frame": 0.6000000000000001,
+      "width_fraction_of_frame": 0.04499999999999993,
+      "bottom_offset_cm": 2.450929577591884e-16,
+      "label": "$\\Phi$",
+      "label_position": "above",
+      "shared": false,
+      "label_bottom_clearance_cm": 0.07960564549605648,
+      "scientific_exponent": 0
+    }
+  ],
+  "target_frame_side_cm": 2.5,
+  "latex_preamble": "\\usepackage{amsmath}\\usepackage{textcomp}",
+  "pinned_font_file": null
+}

@@ -1,237 +1,157 @@
+"""Compact LaTeX figures from existing Affleck arrays; no optimization here."""
+
+from pathlib import Path
+import time
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.colors import ListedColormap, TwoSlopeNorm
-import matplotlib.colors as mcolors
-from numpy import exp, angle
-from config import N_MIN, N_MAX, T_MIN, T_MAX, SITE_N, N_NUM, T_NUM
-import os
-import time
+from matplotlib.colors import ListedColormap, BoundaryNorm, TwoSlopeNorm
+from matplotlib.patches import Patch
+from config import N_MIN, N_MAX, T_MIN, T_MAX, SITE_N
+from publication_style import apply_style, width, save, panel_colorbar, C
+
+PHASE_NAMES = ["Uniform", "Flux", "Kite", "Peierls", "Stripy", "Other"]
+PHASE_COLORS = [C[key] for key in ["light", "red", "blue", "yellow", "sky", "black"]]
 
 
-
-def plot_phase_diagram(phases, timestamp, folder="results/figs", prefix="phase_diagram"):
-
-    os.makedirs(folder, exist_ok=True)
-    filename = f"{prefix}_{timestamp}.pdf"
-    path = os.path.join(folder, filename)
-
-    
-    labels = ["Uniform", "Flux", "Kite", "Peierls", "Stripy", "Other"]
-    cmap = ListedColormap(["gainsboro", "tomato", "deepskyblue", "gold", "skyblue", "black"])
-    label_to_idx = {label: i for i, label in enumerate(labels)}
-    idx_array = np.vectorize(label_to_idx.get)(phases)
-
-    nu_vals = np.linspace(N_MIN / SITE_N, N_MAX / SITE_N, N_NUM)
-    t_vals = np.linspace(T_MIN, T_MAX, T_NUM)
-    X, Y = np.meshgrid(nu_vals, t_vals)
-
-    plt.figure(figsize=(4, 4))
-    pc = plt.pcolormesh(X, Y, idx_array, cmap=cmap, shading="auto", vmin=-0.5, vmax=len(labels)-0.5, rasterized=True)
-    plt.xticks([0.2, 0.3, 0.4, 0.5])
-    plt.yticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5])
-    plt.xlabel(r'$\nu$', fontsize=15)
-    plt.ylabel(r'$t/J$', fontsize=15)
-
-    cbar = plt.colorbar(pc, ticks=np.arange(len(labels)), fraction=0.046, pad=0.04)
-    cbar.ax.set_yticklabels(labels)
-
-    plt.title("Phase Diagram")
-    plt.tight_layout()
-    plt.gca().set_box_aspect(1)
-    plt.savefig(path, dpi=600)
-    print(f"Figure saved to {path}")
-    plt.show()
+def _finish(fig, folder, name, *, legend_fontsize=None):
+    destination = Path(folder) / name
+    save(fig, destination, legend_fontsize=legend_fontsize)
+    plt.close(fig)
+    return destination.with_suffix(".pdf")
 
 
-def plot_order_parameters(data):
-    chi1 = np.array([result[2] for result in data])
-    chi2 = np.array([result[3] for result in data])
-    chi3 = np.array([result[4] for result in data])
-    chi4 = np.array([result[5] for result in data])
-    phi1 = np.array([result[6] for result in data])
-    phi2 = np.array([result[7] for result in data])
-    phi3 = np.array([result[8] for result in data])
-    phi4 = np.array([result[9] for result in data])
-    E = np.array([result[10] for result in data])
-
-    N=np.linspace(N_MIN, N_MAX,N_NUM)  
-    t=np.linspace(T_MIN,T_MAX,T_NUM)    
-    N_mesh, t_mesh = np.meshgrid(N, t)
-
-    chi1 = chi1.reshape(N_mesh.shape)
-    chi2 = chi2.reshape(N_mesh.shape)
-    chi3 = chi3.reshape(N_mesh.shape)
-    chi4 = chi4.reshape(N_mesh.shape)
-    phi1 = phi1.reshape(N_mesh.shape)
-    phi2 = phi2.reshape(N_mesh.shape)
-    phi3 = phi3.reshape(N_mesh.shape)
-    phi4 = phi4.reshape(N_mesh.shape)
-    E  =  E.reshape(N_mesh.shape)
-    '''
-    chi1[0,:]=0
-    chi2[0,:]=0
-    chi3[0,:]=0
-    chi4[0,:]=0
-    phi1[0,:]=0
-    phi2[0,:]=0
-    phi3[0,:]=0
-    phi4[0,:]=0
-    '''
-    phi1[np.abs(chi1)<0.001]=0
-    phi2[np.abs(chi2)<0.001]=0
-    phi3[np.abs(chi3)<0.001]=0
-    phi4[np.abs(chi4)<0.001]=0
-
-    plt.rcParams['text.usetex'] = True
-    plt.rcParams["font.family"] = "Times New Roman"
-
-    plt.figure(figsize=(10,5))  
-    vmax=1
-    vmin=-1   
-    cmap='RdBu' 
-    
-    plt.subplot(2,4,1)
-    
-    norm = mcolors.TwoSlopeNorm(vmin=vmin, vmax = vmax, vcenter=0)
-    plt.pcolor(N_mesh/SITE_N,t_mesh,chi1, shading='auto',cmap=cmap,norm=norm,rasterized=True)
-    #plt.title( "Phase Diagram-$J_1$")
-    plt.xlabel('$\\nu$', fontsize=15) 
-    plt.ylabel('$t/J$', fontsize=15)
-    clb = plt.colorbar(fraction=0.046, pad=0.04)
-    clb.ax.set_ylabel(r'$\chi_1$', rotation=270,labelpad=10,fontsize=15)
-    plt.gca().tick_params(axis='both' , direction='in')
-    plt.gca().set_box_aspect(1)
-    
-    
-    
-    plt.subplot(2,4,2)
-    
-    norm = mcolors.TwoSlopeNorm(vmin=vmin, vmax = vmax, vcenter=0)
-    plt.pcolor(N_mesh/SITE_N,t_mesh,chi2, shading='auto',cmap=cmap,norm=norm,rasterized=True)
-    #plt.title( "Phase Diagram-$J_2$")
-    #plt.xlabel('$\\nu$', fontsize=15) 
-    #plt.ylabel('$V$', fontsize=15)
-    clb = plt.colorbar(fraction=0.046, pad=0.04)
-    clb.ax.set_ylabel(r'$\chi_2$', rotation=270,labelpad=10,fontsize=15)
-    plt.gca().tick_params(axis='both' , direction='in')
-    plt.gca().set_box_aspect(1)
-    
-    
-    plt.subplot(2,4,3)
-    norm = mcolors.TwoSlopeNorm(vmin=vmin, vmax = vmax, vcenter=0)
-    plt.pcolor(N_mesh/SITE_N,t_mesh,chi3, shading='auto',cmap=cmap,norm=norm,rasterized=True)
-    #plt.title( "Phase Diagram-$J_3$")
-    #plt.xlabel('$\\nu$', fontsize=15) 
-    #plt.ylabel('$V$', fontsize=15)
-    clb = plt.colorbar(fraction=0.046, pad=0.04) 
-    clb.ax.set_ylabel(r'$\chi_3$', rotation=270,labelpad=10,fontsize=15)
-    plt.gca().tick_params(axis='both' , direction='in')
-    plt.gca().set_box_aspect(1)
-    
-    
-    plt.subplot(2,4,4)
-    norm = mcolors.TwoSlopeNorm(vmin=vmin, vmax = vmax, vcenter=0)
-    plt.pcolor(N_mesh/SITE_N,t_mesh,chi4, shading='auto',cmap=cmap,norm=norm,rasterized=True)
-    #plt.title( "Phase Diagram-$J_4$")
-    #plt.xlabel('$\\nu$', fontsize=15) 
-    #plt.ylabel('$V$', fontsize=15)
-    clb = plt.colorbar(fraction=0.046, pad=0.04)
-    clb.ax.set_ylabel(r'$\chi_4$', rotation=270,labelpad=10,fontsize=15)
-    plt.gca().tick_params(axis='both' , direction='in')
-    plt.gca().set_box_aspect(1)
-    
-
-    vmax=np.pi
-    vmin=-np.pi
-    plt.subplot(2,4,5) 
-    norm = mcolors.TwoSlopeNorm(vmin=vmin, vmax = vmax, vcenter=0)
-    plt.pcolor(N_mesh/SITE_N,t_mesh,phi1, shading='auto',cmap=cmap,norm=norm,rasterized=True)
-    #plt.title( "Phase Diagram-$J_4$")
-    plt.xlabel('$\\nu$', fontsize=15) 
-    plt.ylabel('$t/J$', fontsize=15)
-    clb = plt.colorbar(fraction=0.046, pad=0.04)
-    clb.ax.set_ylabel(r'$\phi_1$', rotation=270,labelpad=10,fontsize=15)
-    plt.gca().tick_params(axis='both' , direction='in')
-    plt.gca().set_box_aspect(1)
+def plot_phase_diagram(
+    phases,
+    timestamp,
+    folder="results/figs",
+    prefix="phase_diagram",
+    *,
+    fillings=None,
+    hoppings=None,
+    title="Phase diagram",
+):
+    """Display supplied categories without classifying or smoothing any cell."""
+    apply_style()
+    phases = np.asarray(phases)
+    if phases.ndim != 2 or not np.isin(phases, PHASE_NAMES).all():
+        raise ValueError("Expected a rectangular grid of known phase names")
+    fillings = np.asarray(
+        fillings
+        if fillings is not None
+        else np.linspace(N_MIN / SITE_N, N_MAX / SITE_N, phases.shape[1])
+    )
+    hoppings = np.asarray(
+        hoppings if hoppings is not None else np.linspace(T_MIN, T_MAX, phases.shape[0])
+    )
+    if phases.shape != (len(hoppings), len(fillings)):
+        raise ValueError("Phase grid and coordinates have different shapes")
+    codes = np.empty(phases.shape, dtype=int)
+    for index, label in enumerate(PHASE_NAMES):
+        codes[phases == label] = index
+    fig, ax = plt.subplots(figsize=(width(), width() + 0.5), layout="constrained")
+    ax.pcolormesh(
+        fillings,
+        hoppings,
+        codes,
+        shading="nearest",
+        rasterized=True,
+        cmap=ListedColormap(PHASE_COLORS),
+        norm=BoundaryNorm(np.arange(7) - 0.5, 6),
+    )
+    ax.set(xlabel=r"$\nu$", ylabel=r"$t/J$", title=title)
+    handles = [
+        Patch(facecolor=color, label=name)
+        for color, name in zip(PHASE_COLORS, PHASE_NAMES)
+    ]
+    fig.legend(
+        handles=handles,
+        loc="outside lower center",
+        ncol=3,
+        frameon=False,
+        handlelength=0.8,
+        handletextpad=0.35,
+        columnspacing=0.8,
+        labelspacing=0.2,
+    )
+    return _finish(fig, folder, f"{prefix}_{timestamp}", legend_fontsize=7)
 
 
-    plt.subplot(2,4,6)
-    norm = mcolors.TwoSlopeNorm(vmin=vmin, vmax = vmax, vcenter=0)
-    plt.pcolor(N_mesh/SITE_N,t_mesh,phi2, shading='auto',cmap=cmap,norm=norm,rasterized=True)
-    #plt.title( "Phase Diagram-$J_3$")
-    plt.xlabel('$\\nu$', fontsize=15) 
-    #plt.ylabel('$V$', fontsize=15)
-    clb = plt.colorbar(fraction=0.046, pad=0.04) 
-    clb.ax.set_ylabel(r'$\phi_2$', rotation=270,labelpad=10,fontsize=15)
-    plt.gca().tick_params(axis='both' , direction='in')
-    plt.gca().set_box_aspect(1)
-    
-    
-    plt.subplot(2,4,7)
-    norm = mcolors.TwoSlopeNorm(vmin=vmin, vmax = vmax, vcenter=0)
-    plt.pcolor(N_mesh/SITE_N,t_mesh,phi3, shading='auto',cmap=cmap,norm=norm,rasterized=True)
-    #plt.title( "Phase Diagram-$J_4$")
-    plt.xlabel('$\\nu$', fontsize=15) 
-    #plt.ylabel('$V$', fontsize=15)
-    clb = plt.colorbar(fraction=0.046, pad=0.04)
-    clb.ax.set_ylabel(r'$\phi_3$', rotation=270,labelpad=10,fontsize=15)
-    plt.gca().tick_params(axis='both' , direction='in')
-    plt.gca().set_box_aspect(1)
+def _grid(data, site_n):
+    """Use the coordinates saved in each row, independently of current config."""
+    rows = np.asarray(data, dtype=float)
+    if rows.ndim != 2 or rows.shape[1] != 11 or not np.isfinite(rows).all():
+        raise ValueError("Expected finite (N,t,chi[4],phi[4],energy) rows")
+    particles, hoppings = np.unique(rows[:, 0]), np.unique(rows[:, 1])
+    if len(rows) != len(particles) * len(hoppings) or site_n <= 0:
+        raise ValueError("Scan is not a complete rectangular grid")
+    values = np.full((len(hoppings), len(particles), 9), np.nan)
+    for row in rows:
+        iy, ix = np.searchsorted(hoppings, row[1]), np.searchsorted(particles, row[0])
+        if np.isfinite(values[iy, ix]).any():
+            raise ValueError("Duplicate scan coordinate")
+        values[iy, ix] = row[2:]
+    if not np.isfinite(values).all():
+        raise ValueError("Missing scan coordinate")
+    return particles / site_n, hoppings, values
 
 
-    plt.subplot(2,4,8)
-    norm = mcolors.TwoSlopeNorm(vmin=vmin, vmax = vmax, vcenter=0)
-    plt.pcolor(N_mesh/SITE_N,t_mesh,phi4, shading='auto',cmap=cmap,norm=norm,rasterized=True)
-    #plt.title( "Phase Diagram-$J_4$")
-    plt.xlabel('$\\nu$', fontsize=15) 
-    #plt.ylabel('$V$', fontsize=15)
-    clb = plt.colorbar(fraction=0.046, pad=0.04)
-    clb.ax.set_ylabel(r'$\phi_4$', rotation=270,labelpad=10,fontsize=15)
-    plt.gca().tick_params(axis='both' , direction='in')
-    plt.gca().set_box_aspect(1)
-    
+def plot_order_parameters(
+    data, timestamp=None, folder="results/figs", *, site_n=SITE_N
+):
+    apply_style()
+    fillings, hoppings, values = _grid(data, site_n)
+    chis, phis = values[:, :, :4], values[:, :, 4:8].copy()
+    # Preserve the original display convention for undefined tiny-amplitude phases.
+    phis[np.abs(chis) < 0.001] = 0.0
+    fig, axes = plt.subplots(
+        2, 4, figsize=(width(2), width(2) * 0.5), layout="constrained"
+    )
+    for row, (field, bound, symbol) in enumerate(
+        [(chis, 1.0, r"\chi"), (phis, np.pi, r"\phi")]
+    ):
+        for col in range(4):
+            ax = axes[row, col]
+            im = ax.pcolormesh(
+                fillings,
+                hoppings,
+                field[:, :, col],
+                shading="nearest",
+                cmap="RdBu",
+                norm=TwoSlopeNorm(vmin=-bound, vcenter=0, vmax=bound),
+                rasterized=True,
+            )
+            ax.set(xlabel=r"$\nu$", ylabel=r"$t/J$", title=f"({chr(97+4*row+col)})")
+            panel_colorbar(fig, ax, im, rf"${symbol}_{{{col+1}}}$")
+    return _finish(
+        fig, folder, "order_parameters_" + (timestamp or time.strftime("%Y%m%d_%H%M%S"))
+    )
 
-    plt.tight_layout()
-    plt.show()
 
-
-
-def plot_flux_square(data, N_MIN, N_MAX, T_MIN, T_MAX, SITE_N, N_NUM, T_NUM):
-    chi1 = np.array([row[2] for row in data])
-    chi2 = np.array([row[3] for row in data])
-    chi3 = np.array([row[4] for row in data])
-    chi4 = np.array([row[5] for row in data])
-    phi1 = np.array([row[6] for row in data])
-    phi2 = np.array([row[7] for row in data])
-    phi3 = np.array([row[8] for row in data])
-    phi4 = np.array([row[9] for row in data])
-
-    N = np.linspace(N_MIN, N_MAX, N_NUM)
-    t = np.linspace(T_MIN, T_MAX, T_NUM)
-    N_mesh, t_mesh = np.meshgrid(N, t)
-
-    chi1 = chi1.reshape(N_mesh.shape)
-    chi2 = chi2.reshape(N_mesh.shape)
-    chi3 = chi3.reshape(N_mesh.shape)
-    chi4 = chi4.reshape(N_mesh.shape)
-    phi1 = phi1.reshape(N_mesh.shape)
-    phi2 = phi2.reshape(N_mesh.shape)
-    phi3 = phi3.reshape(N_mesh.shape)
-    phi4 = phi4.reshape(N_mesh.shape)
-
-    theta1 = angle(t_mesh + chi1 * exp(-1j * phi1))
-    theta2 = angle(t_mesh + chi2 * exp(-1j * phi2))
-    theta3 = angle(t_mesh + chi3 * exp(-1j * phi3))
-    theta4 = angle(t_mesh + chi4 * exp(-1j * phi4))
-    flux = np.abs(-theta1 + theta2 - theta3 + theta4)
-
-    plt.figure()
-    plt.pcolor(N_mesh / SITE_N, t_mesh, flux, shading='auto', cmap='Blues', rasterized=True)
-    clb = plt.colorbar(fraction=0.046, pad=0.04)
-    clb.ax.set_ylabel(r'$\Phi$', rotation=270, labelpad=10, fontsize=15)
-    plt.xlabel('$\nu$', fontsize=15)
-    plt.ylabel('$t/J$', fontsize=15)
-    plt.gca().tick_params(axis='both', direction='in')
-    plt.gca().set_box_aspect(1)
-    plt.tight_layout()
-    plt.show()
+def plot_flux_square(
+    data,
+    N_MIN=None,
+    N_MAX=None,
+    T_MIN=None,
+    T_MAX=None,
+    SITE_N=SITE_N,
+    N_NUM=None,
+    T_NUM=None,
+    *,
+    timestamp=None,
+    folder="results/figs",
+):
+    """Retain the original flux expression and its absence of branch wrapping."""
+    apply_style()
+    fillings, hoppings, values = _grid(data, SITE_N)
+    chis, phis = values[:, :, :4], values[:, :, 4:8]
+    theta = np.angle(hoppings[:, None, None] + chis * np.exp(-1j * phis))
+    flux = np.abs(-theta[:, :, 0] + theta[:, :, 1] - theta[:, :, 2] + theta[:, :, 3])
+    fig, ax = plt.subplots(figsize=(width(), width()), layout="constrained")
+    im = ax.pcolormesh(
+        fillings, hoppings, flux, shading="nearest", cmap="Blues", rasterized=True
+    )
+    ax.set(xlabel=r"$\nu$", ylabel=r"$t/J$", title="Plaquette flux")
+    panel_colorbar(fig, ax, im, r"$\Phi$")
+    return _finish(
+        fig, folder, "flux_square_" + (timestamp or time.strftime("%Y%m%d_%H%M%S"))
+    )

@@ -1,0 +1,278 @@
+{
+  "template": "v1_compact_square_frames_latex",
+  "text_engine": "latex",
+  "text_usetex": true,
+  "frame_pt": 1.0,
+  "axis_labels_pt": 10,
+  "ticks_pt": 9,
+  "colorbar_ticks_pt": 9,
+  "annotations_pt": 9,
+  "legends_pt": 9,
+  "page_width_cm": 17.701921611394273,
+  "page_height_cm": 8.839938438566755,
+  "font_family": "Computer Modern Roman",
+  "math_font_family": "Computer Modern Math Italic",
+  "data_frames": [
+    {
+      "bounds_figure_fraction": [
+        0.06424659328017626,
+        0.6100808221097938,
+        0.2039915256188381,
+        0.8899191778902064
+      ],
+      "width_cm": 2.4737538378485886,
+      "height_cm": 2.4737538378485886
+    },
+    {
+      "bounds_figure_fraction": [
+        0.314246593280176,
+        0.6100808221097934,
+        0.45399152561883815,
+        0.8899191778902066
+      ],
+      "width_cm": 2.473753837848594,
+      "height_cm": 2.473753837848593
+    },
+    {
+      "bounds_figure_fraction": [
+        0.5642465932801762,
+        0.6100808221097936,
+        0.7039915256188382,
+        0.8899191778902064
+      ],
+      "width_cm": 2.47375383784859,
+      "height_cm": 2.4737538378485895
+    },
+    {
+      "bounds_figure_fraction": [
+        0.8142465932801761,
+        0.6100808221097934,
+        0.9539915256188383,
+        0.8899191778902066
+      ],
+      "width_cm": 2.473753837848594,
+      "height_cm": 2.473753837848593
+    },
+    {
+      "bounds_figure_fraction": [
+        0.06424659328017626,
+        0.1100808221097937,
+        0.2039915256188381,
+        0.3899191778902063
+      ],
+      "width_cm": 2.4737538378485886,
+      "height_cm": 2.4737538378485886
+    },
+    {
+      "bounds_figure_fraction": [
+        0.314246593280176,
+        0.11008082210979339,
+        0.45399152561883815,
+        0.3899191778902066
+      ],
+      "width_cm": 2.473753837848594,
+      "height_cm": 2.473753837848593
+    },
+    {
+      "bounds_figure_fraction": [
+        0.5642465932801762,
+        0.11008082210979361,
+        0.7039915256188382,
+        0.38991917789020636
+      ],
+      "width_cm": 2.47375383784859,
+      "height_cm": 2.4737538378485895
+    },
+    {
+      "bounds_figure_fraction": [
+        0.8142465932801761,
+        0.11008082210979339,
+        0.9539915256188383,
+        0.3899191778902066
+      ],
+      "width_cm": 2.473753837848594,
+      "height_cm": 2.473753837848593
+    }
+  ],
+  "colorbars": [
+    {
+      "parent_bounds_figure_fraction": [
+        0.06424659328017626,
+        0.6100808221097938,
+        0.2039915256188381,
+        0.8899191778902064
+      ],
+      "bounds_figure_fraction": [
+        0.21028004757407787,
+        0.6100808221097938,
+        0.21656856952931763,
+        0.7779838355780413
+      ],
+      "height_fraction_of_frame": 0.5999999999999999,
+      "width_fraction_of_frame": 0.044999999999999894,
+      "bottom_offset_cm": 0.0,
+      "label": "$\\chi_{1}$",
+      "label_position": "above",
+      "shared": false,
+      "label_bottom_clearance_cm": 0.07960564549605505,
+      "scientific_exponent": 0
+    },
+    {
+      "parent_bounds_figure_fraction": [
+        0.314246593280176,
+        0.6100808221097934,
+        0.45399152561883815,
+        0.8899191778902066
+      ],
+      "bounds_figure_fraction": [
+        0.4602800475740779,
+        0.6100808221097934,
+        0.4665685695293177,
+        0.7779838355780413
+      ],
+      "height_fraction_of_frame": 0.5999999999999999,
+      "width_fraction_of_frame": 0.04499999999999979,
+      "bottom_offset_cm": 0.0,
+      "label": "$\\chi_{2}$",
+      "label_position": "above",
+      "shared": false,
+      "label_bottom_clearance_cm": 0.07960564549605505,
+      "scientific_exponent": 0
+    },
+    {
+      "parent_bounds_figure_fraction": [
+        0.5642465932801762,
+        0.6100808221097936,
+        0.7039915256188382,
+        0.8899191778902064
+      ],
+      "bounds_figure_fraction": [
+        0.7102800475740778,
+        0.6100808221097936,
+        0.7165685695293176,
+        0.7779838355780413
+      ],
+      "height_fraction_of_frame": 0.6000000000000001,
+      "width_fraction_of_frame": 0.044999999999999866,
+      "bottom_offset_cm": 0.0,
+      "label": "$\\chi_{3}$",
+      "label_position": "above",
+      "shared": false,
+      "label_bottom_clearance_cm": 0.07960564549605505,
+      "scientific_exponent": 0
+    },
+    {
+      "parent_bounds_figure_fraction": [
+        0.8142465932801761,
+        0.6100808221097934,
+        0.9539915256188383,
+        0.8899191778902066
+      ],
+      "bounds_figure_fraction": [
+        0.9602800475740781,
+        0.6100808221097934,
+        0.9665685695293179,
+        0.7779838355780413
+      ],
+      "height_fraction_of_frame": 0.5999999999999999,
+      "width_fraction_of_frame": 0.04499999999999979,
+      "bottom_offset_cm": 0.0,
+      "label": "$\\chi_{4}$",
+      "label_position": "above",
+      "shared": false,
+      "label_bottom_clearance_cm": 0.07960564549605505,
+      "scientific_exponent": 0
+    },
+    {
+      "parent_bounds_figure_fraction": [
+        0.06424659328017626,
+        0.1100808221097937,
+        0.2039915256188381,
+        0.3899191778902063
+      ],
+      "bounds_figure_fraction": [
+        0.21028004757407787,
+        0.11008082210979368,
+        0.21656856952931763,
+        0.2779838355780413
+      ],
+      "height_fraction_of_frame": 0.6000000000000001,
+      "width_fraction_of_frame": 0.044999999999999894,
+      "bottom_offset_cm": -1.2267878988457207e-16,
+      "label": "$\\phi_{1}$",
+      "label_position": "above",
+      "shared": false,
+      "label_bottom_clearance_cm": 0.07960564549605653,
+      "scientific_exponent": 0
+    },
+    {
+      "parent_bounds_figure_fraction": [
+        0.314246593280176,
+        0.11008082210979339,
+        0.45399152561883815,
+        0.3899191778902066
+      ],
+      "bounds_figure_fraction": [
+        0.4602800475740779,
+        0.11008082210979339,
+        0.4665685695293177,
+        0.2779838355780413
+      ],
+      "height_fraction_of_frame": 0.6,
+      "width_fraction_of_frame": 0.04499999999999979,
+      "bottom_offset_cm": 0.0,
+      "label": "$\\phi_{2}$",
+      "label_position": "above",
+      "shared": false,
+      "label_bottom_clearance_cm": 0.07960564549605653,
+      "scientific_exponent": 0
+    },
+    {
+      "parent_bounds_figure_fraction": [
+        0.5642465932801762,
+        0.11008082210979361,
+        0.7039915256188382,
+        0.38991917789020636
+      ],
+      "bounds_figure_fraction": [
+        0.7102800475740778,
+        0.11008082210979361,
+        0.7165685695293176,
+        0.2779838355780413
+      ],
+      "height_fraction_of_frame": 0.6000000000000002,
+      "width_fraction_of_frame": 0.044999999999999866,
+      "bottom_offset_cm": 0.0,
+      "label": "$\\phi_{3}$",
+      "label_position": "above",
+      "shared": false,
+      "label_bottom_clearance_cm": 0.07960564549605653,
+      "scientific_exponent": 0
+    },
+    {
+      "parent_bounds_figure_fraction": [
+        0.8142465932801761,
+        0.11008082210979339,
+        0.9539915256188383,
+        0.3899191778902066
+      ],
+      "bounds_figure_fraction": [
+        0.9602800475740781,
+        0.11008082210979339,
+        0.9665685695293179,
+        0.2779838355780413
+      ],
+      "height_fraction_of_frame": 0.6,
+      "width_fraction_of_frame": 0.04499999999999979,
+      "bottom_offset_cm": 0.0,
+      "label": "$\\phi_{4}$",
+      "label_position": "above",
+      "shared": false,
+      "label_bottom_clearance_cm": 0.07960564549605653,
+      "scientific_exponent": 0
+    }
+  ],
+  "target_frame_side_cm": 2.5,
+  "latex_preamble": "\\usepackage{amsmath}\\usepackage{textcomp}",
+  "pinned_font_file": null
+}

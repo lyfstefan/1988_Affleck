@@ -1,0 +1,1245 @@
+{
+  "figures_verified": 9,
+  "square_data_frames": 30,
+  "individual_short_colorbars": 27,
+  "original_plotted_phase_cells_preserved": 4500,
+  "original_scientific_and_scan_sha256": {
+    "1988_Affleck_code/solver.py": "10c512407889ec8f5435f7648fec80da37d650648fa8c8c13b74a6ddd4814365",
+    "1988_Affleck_code/bandstructure.py": "b328f7706d14ed5d9fd284497051d09e0c3ca294a612ab9f6a75c21f262f0a96",
+    "1988_Affleck_code/config.py": "dc55f96d6abecc1758764ec937274aa6396d34566df88463cd1a8d46850e7df5",
+    "1988_Affleck_code/phase_classify.py": "5242808982a93aa7eacab63412980e952d253af35a5123950b40647252639641",
+    "1988_Affleck_code/data_utils.py": "c1f9df3ea097c6e353effdadf8f77dcde90b344c78e0b3e87e3ef0557e41fcf9",
+    "1988_Affleck_code/results/data/scan_20250628_175145.npy": "30746a9e0083521b9cd40d0654f9b4e5b38a8b55bbdac4a8669e14130f62d750",
+    "1988_Affleck_code/results/data/scan_20250626_224949.npy": "b119fbac39ee957261bcf77c508fe24aa0ab91ef68a9c40d91d327851823389b",
+    "1988_Affleck_code/results/data/scan_20250626_234707.npy": "cf84152ebdedd457a5d07d3db58b1047317b5723997b8dbec78b76fc5ad95364"
+  },
+  "original_figures_preserved_byte_for_byte": true,
+  "tests_passed": 3,
+  "pdf_font_and_geometry_checks": [
+    {
+      "group": "1988_Affleck",
+      "stem": "flux_square_20250626_224949",
+      "pdf_width_cm": 4.415202077229818,
+      "fonts": [
+        "CMMI10",
+        "CMMI9",
+        "CMR9"
+      ],
+      "page_height_cm": 4.415202077229818,
+      "all_text_rendered_with_latex": true,
+      "square_data_frames_and_pdf_spines_verified": true,
+      "roman_font_metric_bboxes_within_2pt_page_tolerance": true,
+      "template": {
+        "template": "v1_compact_square_frames_latex",
+        "text_engine": "latex",
+        "text_usetex": true,
+        "frame_pt": 1.0,
+        "axis_labels_pt": 10,
+        "ticks_pt": 9,
+        "colorbar_ticks_pt": 9,
+        "annotations_pt": 9,
+        "legends_pt": 9,
+        "page_width_cm": 4.415202212941654,
+        "page_height_cm": 4.415202212941654,
+        "font_family": "Computer Modern Roman",
+        "math_font_family": "Computer Modern Math Italic",
+        "data_frames": [
+          {
+            "bounds_figure_fraction": [
+              0.2575846140662004,
+              0.26522374597240866,
+              0.8238100958056562,
+              0.8314492277118646
+            ],
+            "width_cm": 2.5,
+            "height_cm": 2.5
+          }
+        ],
+        "colorbars": [
+          {
+            "parent_bounds_figure_fraction": [
+              0.2575846140662004,
+              0.26522374597240866,
+              0.8238100958056562,
+              0.8314492277118646
+            ],
+            "bounds_figure_fraction": [
+              0.8492902424839317,
+              0.2652237459724087,
+              0.8747703891622072,
+              0.6049590350160823
+            ],
+            "height_fraction_of_frame": 0.6000000000000001,
+            "width_fraction_of_frame": 0.04499999999999993,
+            "bottom_offset_cm": 2.450929577591884e-16,
+            "label": "$\\Phi$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605648,
+            "scientific_exponent": 0
+          }
+        ],
+        "target_frame_side_cm": 2.5,
+        "latex_preamble": "\\usepackage{amsmath}\\usepackage{textcomp}",
+        "pinned_font_file": null
+      }
+    },
+    {
+      "group": "1988_Affleck",
+      "stem": "flux_square_20250626_234707",
+      "pdf_width_cm": 4.415202077229818,
+      "fonts": [
+        "CMMI10",
+        "CMMI9",
+        "CMR9"
+      ],
+      "page_height_cm": 4.415202077229818,
+      "all_text_rendered_with_latex": true,
+      "square_data_frames_and_pdf_spines_verified": true,
+      "roman_font_metric_bboxes_within_2pt_page_tolerance": true,
+      "template": {
+        "template": "v1_compact_square_frames_latex",
+        "text_engine": "latex",
+        "text_usetex": true,
+        "frame_pt": 1.0,
+        "axis_labels_pt": 10,
+        "ticks_pt": 9,
+        "colorbar_ticks_pt": 9,
+        "annotations_pt": 9,
+        "legends_pt": 9,
+        "page_width_cm": 4.415202212941654,
+        "page_height_cm": 4.415202212941654,
+        "font_family": "Computer Modern Roman",
+        "math_font_family": "Computer Modern Math Italic",
+        "data_frames": [
+          {
+            "bounds_figure_fraction": [
+              0.2575846140662004,
+              0.26522374597240866,
+              0.8238100958056562,
+              0.8314492277118646
+            ],
+            "width_cm": 2.5,
+            "height_cm": 2.5
+          }
+        ],
+        "colorbars": [
+          {
+            "parent_bounds_figure_fraction": [
+              0.2575846140662004,
+              0.26522374597240866,
+              0.8238100958056562,
+              0.8314492277118646
+            ],
+            "bounds_figure_fraction": [
+              0.8492902424839317,
+              0.2652237459724087,
+              0.8747703891622072,
+              0.6049590350160823
+            ],
+            "height_fraction_of_frame": 0.6000000000000001,
+            "width_fraction_of_frame": 0.04499999999999993,
+            "bottom_offset_cm": 2.450929577591884e-16,
+            "label": "$\\Phi$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605648,
+            "scientific_exponent": 0
+          }
+        ],
+        "target_frame_side_cm": 2.5,
+        "latex_preamble": "\\usepackage{amsmath}\\usepackage{textcomp}",
+        "pinned_font_file": null
+      }
+    },
+    {
+      "group": "1988_Affleck",
+      "stem": "flux_square_20250628_175145",
+      "pdf_width_cm": 4.415202077229818,
+      "fonts": [
+        "CMMI10",
+        "CMMI9",
+        "CMR9"
+      ],
+      "page_height_cm": 4.415202077229818,
+      "all_text_rendered_with_latex": true,
+      "square_data_frames_and_pdf_spines_verified": true,
+      "roman_font_metric_bboxes_within_2pt_page_tolerance": true,
+      "template": {
+        "template": "v1_compact_square_frames_latex",
+        "text_engine": "latex",
+        "text_usetex": true,
+        "frame_pt": 1.0,
+        "axis_labels_pt": 10,
+        "ticks_pt": 9,
+        "colorbar_ticks_pt": 9,
+        "annotations_pt": 9,
+        "legends_pt": 9,
+        "page_width_cm": 4.415202212941654,
+        "page_height_cm": 4.415202212941654,
+        "font_family": "Computer Modern Roman",
+        "math_font_family": "Computer Modern Math Italic",
+        "data_frames": [
+          {
+            "bounds_figure_fraction": [
+              0.2575846140662004,
+              0.26522374597240866,
+              0.8238100958056562,
+              0.8314492277118646
+            ],
+            "width_cm": 2.5,
+            "height_cm": 2.5
+          }
+        ],
+        "colorbars": [
+          {
+            "parent_bounds_figure_fraction": [
+              0.2575846140662004,
+              0.26522374597240866,
+              0.8238100958056562,
+              0.8314492277118646
+            ],
+            "bounds_figure_fraction": [
+              0.8492902424839317,
+              0.2652237459724087,
+              0.8747703891622072,
+              0.6049590350160823
+            ],
+            "height_fraction_of_frame": 0.6000000000000001,
+            "width_fraction_of_frame": 0.04499999999999993,
+            "bottom_offset_cm": 2.450929577591884e-16,
+            "label": "$\\Phi$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605648,
+            "scientific_exponent": 0
+          }
+        ],
+        "target_frame_side_cm": 2.5,
+        "latex_preamble": "\\usepackage{amsmath}\\usepackage{textcomp}",
+        "pinned_font_file": null
+      }
+    },
+    {
+      "group": "1988_Affleck",
+      "stem": "order_parameters_20250626_224949",
+      "pdf_width_cm": 17.70192121717665,
+      "fonts": [
+        "CMMI10",
+        "CMMI9",
+        "CMR6",
+        "CMR9",
+        "CMSY9"
+      ],
+      "page_height_cm": 8.839938456217448,
+      "all_text_rendered_with_latex": true,
+      "square_data_frames_and_pdf_spines_verified": true,
+      "roman_font_metric_bboxes_within_2pt_page_tolerance": true,
+      "template": {
+        "template": "v1_compact_square_frames_latex",
+        "text_engine": "latex",
+        "text_usetex": true,
+        "frame_pt": 1.0,
+        "axis_labels_pt": 10,
+        "ticks_pt": 9,
+        "colorbar_ticks_pt": 9,
+        "annotations_pt": 9,
+        "legends_pt": 9,
+        "page_width_cm": 17.701921611394273,
+        "page_height_cm": 8.839938438566755,
+        "font_family": "Computer Modern Roman",
+        "math_font_family": "Computer Modern Math Italic",
+        "data_frames": [
+          {
+            "bounds_figure_fraction": [
+              0.06424659328017626,
+              0.6100808221097938,
+              0.2039915256188381,
+              0.8899191778902064
+            ],
+            "width_cm": 2.4737538378485886,
+            "height_cm": 2.4737538378485886
+          },
+          {
+            "bounds_figure_fraction": [
+              0.314246593280176,
+              0.6100808221097934,
+              0.45399152561883815,
+              0.8899191778902066
+            ],
+            "width_cm": 2.473753837848594,
+            "height_cm": 2.473753837848593
+          },
+          {
+            "bounds_figure_fraction": [
+              0.5642465932801762,
+              0.6100808221097936,
+              0.7039915256188382,
+              0.8899191778902064
+            ],
+            "width_cm": 2.47375383784859,
+            "height_cm": 2.4737538378485895
+          },
+          {
+            "bounds_figure_fraction": [
+              0.8142465932801761,
+              0.6100808221097934,
+              0.9539915256188383,
+              0.8899191778902066
+            ],
+            "width_cm": 2.473753837848594,
+            "height_cm": 2.473753837848593
+          },
+          {
+            "bounds_figure_fraction": [
+              0.06424659328017626,
+              0.1100808221097937,
+              0.2039915256188381,
+              0.3899191778902063
+            ],
+            "width_cm": 2.4737538378485886,
+            "height_cm": 2.4737538378485886
+          },
+          {
+            "bounds_figure_fraction": [
+              0.314246593280176,
+              0.11008082210979339,
+              0.45399152561883815,
+              0.3899191778902066
+            ],
+            "width_cm": 2.473753837848594,
+            "height_cm": 2.473753837848593
+          },
+          {
+            "bounds_figure_fraction": [
+              0.5642465932801762,
+              0.11008082210979361,
+              0.7039915256188382,
+              0.38991917789020636
+            ],
+            "width_cm": 2.47375383784859,
+            "height_cm": 2.4737538378485895
+          },
+          {
+            "bounds_figure_fraction": [
+              0.8142465932801761,
+              0.11008082210979339,
+              0.9539915256188383,
+              0.3899191778902066
+            ],
+            "width_cm": 2.473753837848594,
+            "height_cm": 2.473753837848593
+          }
+        ],
+        "colorbars": [
+          {
+            "parent_bounds_figure_fraction": [
+              0.06424659328017626,
+              0.6100808221097938,
+              0.2039915256188381,
+              0.8899191778902064
+            ],
+            "bounds_figure_fraction": [
+              0.21028004757407787,
+              0.6100808221097938,
+              0.21656856952931763,
+              0.7779838355780413
+            ],
+            "height_fraction_of_frame": 0.5999999999999999,
+            "width_fraction_of_frame": 0.044999999999999894,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\chi_{1}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605505,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.314246593280176,
+              0.6100808221097934,
+              0.45399152561883815,
+              0.8899191778902066
+            ],
+            "bounds_figure_fraction": [
+              0.4602800475740779,
+              0.6100808221097934,
+              0.4665685695293177,
+              0.7779838355780413
+            ],
+            "height_fraction_of_frame": 0.5999999999999999,
+            "width_fraction_of_frame": 0.04499999999999979,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\chi_{2}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605505,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.5642465932801762,
+              0.6100808221097936,
+              0.7039915256188382,
+              0.8899191778902064
+            ],
+            "bounds_figure_fraction": [
+              0.7102800475740778,
+              0.6100808221097936,
+              0.7165685695293176,
+              0.7779838355780413
+            ],
+            "height_fraction_of_frame": 0.6000000000000001,
+            "width_fraction_of_frame": 0.044999999999999866,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\chi_{3}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605505,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.8142465932801761,
+              0.6100808221097934,
+              0.9539915256188383,
+              0.8899191778902066
+            ],
+            "bounds_figure_fraction": [
+              0.9602800475740781,
+              0.6100808221097934,
+              0.9665685695293179,
+              0.7779838355780413
+            ],
+            "height_fraction_of_frame": 0.5999999999999999,
+            "width_fraction_of_frame": 0.04499999999999979,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\chi_{4}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605505,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.06424659328017626,
+              0.1100808221097937,
+              0.2039915256188381,
+              0.3899191778902063
+            ],
+            "bounds_figure_fraction": [
+              0.21028004757407787,
+              0.11008082210979368,
+              0.21656856952931763,
+              0.2779838355780413
+            ],
+            "height_fraction_of_frame": 0.6000000000000001,
+            "width_fraction_of_frame": 0.044999999999999894,
+            "bottom_offset_cm": -1.2267878988457207e-16,
+            "label": "$\\phi_{1}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605653,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.314246593280176,
+              0.11008082210979339,
+              0.45399152561883815,
+              0.3899191778902066
+            ],
+            "bounds_figure_fraction": [
+              0.4602800475740779,
+              0.11008082210979339,
+              0.4665685695293177,
+              0.2779838355780413
+            ],
+            "height_fraction_of_frame": 0.6,
+            "width_fraction_of_frame": 0.04499999999999979,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\phi_{2}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605653,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.5642465932801762,
+              0.11008082210979361,
+              0.7039915256188382,
+              0.38991917789020636
+            ],
+            "bounds_figure_fraction": [
+              0.7102800475740778,
+              0.11008082210979361,
+              0.7165685695293176,
+              0.2779838355780413
+            ],
+            "height_fraction_of_frame": 0.6000000000000002,
+            "width_fraction_of_frame": 0.044999999999999866,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\phi_{3}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605653,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.8142465932801761,
+              0.11008082210979339,
+              0.9539915256188383,
+              0.3899191778902066
+            ],
+            "bounds_figure_fraction": [
+              0.9602800475740781,
+              0.11008082210979339,
+              0.9665685695293179,
+              0.2779838355780413
+            ],
+            "height_fraction_of_frame": 0.6,
+            "width_fraction_of_frame": 0.04499999999999979,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\phi_{4}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605653,
+            "scientific_exponent": 0
+          }
+        ],
+        "target_frame_side_cm": 2.5,
+        "latex_preamble": "\\usepackage{amsmath}\\usepackage{textcomp}",
+        "pinned_font_file": null
+      }
+    },
+    {
+      "group": "1988_Affleck",
+      "stem": "order_parameters_20250626_234707",
+      "pdf_width_cm": 17.70192121717665,
+      "fonts": [
+        "CMMI10",
+        "CMMI9",
+        "CMR6",
+        "CMR9",
+        "CMSY9"
+      ],
+      "page_height_cm": 8.839938456217448,
+      "all_text_rendered_with_latex": true,
+      "square_data_frames_and_pdf_spines_verified": true,
+      "roman_font_metric_bboxes_within_2pt_page_tolerance": true,
+      "template": {
+        "template": "v1_compact_square_frames_latex",
+        "text_engine": "latex",
+        "text_usetex": true,
+        "frame_pt": 1.0,
+        "axis_labels_pt": 10,
+        "ticks_pt": 9,
+        "colorbar_ticks_pt": 9,
+        "annotations_pt": 9,
+        "legends_pt": 9,
+        "page_width_cm": 17.701921611394273,
+        "page_height_cm": 8.839938438566755,
+        "font_family": "Computer Modern Roman",
+        "math_font_family": "Computer Modern Math Italic",
+        "data_frames": [
+          {
+            "bounds_figure_fraction": [
+              0.06424659328017626,
+              0.6100808221097938,
+              0.2039915256188381,
+              0.8899191778902064
+            ],
+            "width_cm": 2.4737538378485886,
+            "height_cm": 2.4737538378485886
+          },
+          {
+            "bounds_figure_fraction": [
+              0.314246593280176,
+              0.6100808221097934,
+              0.45399152561883815,
+              0.8899191778902066
+            ],
+            "width_cm": 2.473753837848594,
+            "height_cm": 2.473753837848593
+          },
+          {
+            "bounds_figure_fraction": [
+              0.5642465932801762,
+              0.6100808221097936,
+              0.7039915256188382,
+              0.8899191778902064
+            ],
+            "width_cm": 2.47375383784859,
+            "height_cm": 2.4737538378485895
+          },
+          {
+            "bounds_figure_fraction": [
+              0.8142465932801761,
+              0.6100808221097934,
+              0.9539915256188383,
+              0.8899191778902066
+            ],
+            "width_cm": 2.473753837848594,
+            "height_cm": 2.473753837848593
+          },
+          {
+            "bounds_figure_fraction": [
+              0.06424659328017626,
+              0.1100808221097937,
+              0.2039915256188381,
+              0.3899191778902063
+            ],
+            "width_cm": 2.4737538378485886,
+            "height_cm": 2.4737538378485886
+          },
+          {
+            "bounds_figure_fraction": [
+              0.314246593280176,
+              0.11008082210979339,
+              0.45399152561883815,
+              0.3899191778902066
+            ],
+            "width_cm": 2.473753837848594,
+            "height_cm": 2.473753837848593
+          },
+          {
+            "bounds_figure_fraction": [
+              0.5642465932801762,
+              0.11008082210979361,
+              0.7039915256188382,
+              0.38991917789020636
+            ],
+            "width_cm": 2.47375383784859,
+            "height_cm": 2.4737538378485895
+          },
+          {
+            "bounds_figure_fraction": [
+              0.8142465932801761,
+              0.11008082210979339,
+              0.9539915256188383,
+              0.3899191778902066
+            ],
+            "width_cm": 2.473753837848594,
+            "height_cm": 2.473753837848593
+          }
+        ],
+        "colorbars": [
+          {
+            "parent_bounds_figure_fraction": [
+              0.06424659328017626,
+              0.6100808221097938,
+              0.2039915256188381,
+              0.8899191778902064
+            ],
+            "bounds_figure_fraction": [
+              0.21028004757407787,
+              0.6100808221097938,
+              0.21656856952931763,
+              0.7779838355780413
+            ],
+            "height_fraction_of_frame": 0.5999999999999999,
+            "width_fraction_of_frame": 0.044999999999999894,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\chi_{1}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605505,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.314246593280176,
+              0.6100808221097934,
+              0.45399152561883815,
+              0.8899191778902066
+            ],
+            "bounds_figure_fraction": [
+              0.4602800475740779,
+              0.6100808221097934,
+              0.4665685695293177,
+              0.7779838355780413
+            ],
+            "height_fraction_of_frame": 0.5999999999999999,
+            "width_fraction_of_frame": 0.04499999999999979,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\chi_{2}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605505,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.5642465932801762,
+              0.6100808221097936,
+              0.7039915256188382,
+              0.8899191778902064
+            ],
+            "bounds_figure_fraction": [
+              0.7102800475740778,
+              0.6100808221097936,
+              0.7165685695293176,
+              0.7779838355780413
+            ],
+            "height_fraction_of_frame": 0.6000000000000001,
+            "width_fraction_of_frame": 0.044999999999999866,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\chi_{3}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605505,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.8142465932801761,
+              0.6100808221097934,
+              0.9539915256188383,
+              0.8899191778902066
+            ],
+            "bounds_figure_fraction": [
+              0.9602800475740781,
+              0.6100808221097934,
+              0.9665685695293179,
+              0.7779838355780413
+            ],
+            "height_fraction_of_frame": 0.5999999999999999,
+            "width_fraction_of_frame": 0.04499999999999979,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\chi_{4}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605505,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.06424659328017626,
+              0.1100808221097937,
+              0.2039915256188381,
+              0.3899191778902063
+            ],
+            "bounds_figure_fraction": [
+              0.21028004757407787,
+              0.11008082210979368,
+              0.21656856952931763,
+              0.2779838355780413
+            ],
+            "height_fraction_of_frame": 0.6000000000000001,
+            "width_fraction_of_frame": 0.044999999999999894,
+            "bottom_offset_cm": -1.2267878988457207e-16,
+            "label": "$\\phi_{1}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605653,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.314246593280176,
+              0.11008082210979339,
+              0.45399152561883815,
+              0.3899191778902066
+            ],
+            "bounds_figure_fraction": [
+              0.4602800475740779,
+              0.11008082210979339,
+              0.4665685695293177,
+              0.2779838355780413
+            ],
+            "height_fraction_of_frame": 0.6,
+            "width_fraction_of_frame": 0.04499999999999979,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\phi_{2}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605653,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.5642465932801762,
+              0.11008082210979361,
+              0.7039915256188382,
+              0.38991917789020636
+            ],
+            "bounds_figure_fraction": [
+              0.7102800475740778,
+              0.11008082210979361,
+              0.7165685695293176,
+              0.2779838355780413
+            ],
+            "height_fraction_of_frame": 0.6000000000000002,
+            "width_fraction_of_frame": 0.044999999999999866,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\phi_{3}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605653,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.8142465932801761,
+              0.11008082210979339,
+              0.9539915256188383,
+              0.3899191778902066
+            ],
+            "bounds_figure_fraction": [
+              0.9602800475740781,
+              0.11008082210979339,
+              0.9665685695293179,
+              0.2779838355780413
+            ],
+            "height_fraction_of_frame": 0.6,
+            "width_fraction_of_frame": 0.04499999999999979,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\phi_{4}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605653,
+            "scientific_exponent": 0
+          }
+        ],
+        "target_frame_side_cm": 2.5,
+        "latex_preamble": "\\usepackage{amsmath}\\usepackage{textcomp}",
+        "pinned_font_file": null
+      }
+    },
+    {
+      "group": "1988_Affleck",
+      "stem": "order_parameters_20250628_175145",
+      "pdf_width_cm": 17.70192121717665,
+      "fonts": [
+        "CMMI10",
+        "CMMI9",
+        "CMR6",
+        "CMR9",
+        "CMSY9"
+      ],
+      "page_height_cm": 8.839938456217448,
+      "all_text_rendered_with_latex": true,
+      "square_data_frames_and_pdf_spines_verified": true,
+      "roman_font_metric_bboxes_within_2pt_page_tolerance": true,
+      "template": {
+        "template": "v1_compact_square_frames_latex",
+        "text_engine": "latex",
+        "text_usetex": true,
+        "frame_pt": 1.0,
+        "axis_labels_pt": 10,
+        "ticks_pt": 9,
+        "colorbar_ticks_pt": 9,
+        "annotations_pt": 9,
+        "legends_pt": 9,
+        "page_width_cm": 17.701921611394273,
+        "page_height_cm": 8.839938438566755,
+        "font_family": "Computer Modern Roman",
+        "math_font_family": "Computer Modern Math Italic",
+        "data_frames": [
+          {
+            "bounds_figure_fraction": [
+              0.06424659328017626,
+              0.6100808221097938,
+              0.2039915256188381,
+              0.8899191778902064
+            ],
+            "width_cm": 2.4737538378485886,
+            "height_cm": 2.4737538378485886
+          },
+          {
+            "bounds_figure_fraction": [
+              0.314246593280176,
+              0.6100808221097934,
+              0.45399152561883815,
+              0.8899191778902066
+            ],
+            "width_cm": 2.473753837848594,
+            "height_cm": 2.473753837848593
+          },
+          {
+            "bounds_figure_fraction": [
+              0.5642465932801762,
+              0.6100808221097936,
+              0.7039915256188382,
+              0.8899191778902064
+            ],
+            "width_cm": 2.47375383784859,
+            "height_cm": 2.4737538378485895
+          },
+          {
+            "bounds_figure_fraction": [
+              0.8142465932801761,
+              0.6100808221097934,
+              0.9539915256188383,
+              0.8899191778902066
+            ],
+            "width_cm": 2.473753837848594,
+            "height_cm": 2.473753837848593
+          },
+          {
+            "bounds_figure_fraction": [
+              0.06424659328017626,
+              0.1100808221097937,
+              0.2039915256188381,
+              0.3899191778902063
+            ],
+            "width_cm": 2.4737538378485886,
+            "height_cm": 2.4737538378485886
+          },
+          {
+            "bounds_figure_fraction": [
+              0.314246593280176,
+              0.11008082210979339,
+              0.45399152561883815,
+              0.3899191778902066
+            ],
+            "width_cm": 2.473753837848594,
+            "height_cm": 2.473753837848593
+          },
+          {
+            "bounds_figure_fraction": [
+              0.5642465932801762,
+              0.11008082210979361,
+              0.7039915256188382,
+              0.38991917789020636
+            ],
+            "width_cm": 2.47375383784859,
+            "height_cm": 2.4737538378485895
+          },
+          {
+            "bounds_figure_fraction": [
+              0.8142465932801761,
+              0.11008082210979339,
+              0.9539915256188383,
+              0.3899191778902066
+            ],
+            "width_cm": 2.473753837848594,
+            "height_cm": 2.473753837848593
+          }
+        ],
+        "colorbars": [
+          {
+            "parent_bounds_figure_fraction": [
+              0.06424659328017626,
+              0.6100808221097938,
+              0.2039915256188381,
+              0.8899191778902064
+            ],
+            "bounds_figure_fraction": [
+              0.21028004757407787,
+              0.6100808221097938,
+              0.21656856952931763,
+              0.7779838355780413
+            ],
+            "height_fraction_of_frame": 0.5999999999999999,
+            "width_fraction_of_frame": 0.044999999999999894,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\chi_{1}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605505,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.314246593280176,
+              0.6100808221097934,
+              0.45399152561883815,
+              0.8899191778902066
+            ],
+            "bounds_figure_fraction": [
+              0.4602800475740779,
+              0.6100808221097934,
+              0.4665685695293177,
+              0.7779838355780413
+            ],
+            "height_fraction_of_frame": 0.5999999999999999,
+            "width_fraction_of_frame": 0.04499999999999979,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\chi_{2}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605505,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.5642465932801762,
+              0.6100808221097936,
+              0.7039915256188382,
+              0.8899191778902064
+            ],
+            "bounds_figure_fraction": [
+              0.7102800475740778,
+              0.6100808221097936,
+              0.7165685695293176,
+              0.7779838355780413
+            ],
+            "height_fraction_of_frame": 0.6000000000000001,
+            "width_fraction_of_frame": 0.044999999999999866,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\chi_{3}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605505,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.8142465932801761,
+              0.6100808221097934,
+              0.9539915256188383,
+              0.8899191778902066
+            ],
+            "bounds_figure_fraction": [
+              0.9602800475740781,
+              0.6100808221097934,
+              0.9665685695293179,
+              0.7779838355780413
+            ],
+            "height_fraction_of_frame": 0.5999999999999999,
+            "width_fraction_of_frame": 0.04499999999999979,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\chi_{4}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605505,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.06424659328017626,
+              0.1100808221097937,
+              0.2039915256188381,
+              0.3899191778902063
+            ],
+            "bounds_figure_fraction": [
+              0.21028004757407787,
+              0.11008082210979368,
+              0.21656856952931763,
+              0.2779838355780413
+            ],
+            "height_fraction_of_frame": 0.6000000000000001,
+            "width_fraction_of_frame": 0.044999999999999894,
+            "bottom_offset_cm": -1.2267878988457207e-16,
+            "label": "$\\phi_{1}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605653,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.314246593280176,
+              0.11008082210979339,
+              0.45399152561883815,
+              0.3899191778902066
+            ],
+            "bounds_figure_fraction": [
+              0.4602800475740779,
+              0.11008082210979339,
+              0.4665685695293177,
+              0.2779838355780413
+            ],
+            "height_fraction_of_frame": 0.6,
+            "width_fraction_of_frame": 0.04499999999999979,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\phi_{2}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605653,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.5642465932801762,
+              0.11008082210979361,
+              0.7039915256188382,
+              0.38991917789020636
+            ],
+            "bounds_figure_fraction": [
+              0.7102800475740778,
+              0.11008082210979361,
+              0.7165685695293176,
+              0.2779838355780413
+            ],
+            "height_fraction_of_frame": 0.6000000000000002,
+            "width_fraction_of_frame": 0.044999999999999866,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\phi_{3}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605653,
+            "scientific_exponent": 0
+          },
+          {
+            "parent_bounds_figure_fraction": [
+              0.8142465932801761,
+              0.11008082210979339,
+              0.9539915256188383,
+              0.3899191778902066
+            ],
+            "bounds_figure_fraction": [
+              0.9602800475740781,
+              0.11008082210979339,
+              0.9665685695293179,
+              0.2779838355780413
+            ],
+            "height_fraction_of_frame": 0.6,
+            "width_fraction_of_frame": 0.04499999999999979,
+            "bottom_offset_cm": 0.0,
+            "label": "$\\phi_{4}$",
+            "label_position": "above",
+            "shared": false,
+            "label_bottom_clearance_cm": 0.07960564549605653,
+            "scientific_exponent": 0
+          }
+        ],
+        "target_frame_side_cm": 2.5,
+        "latex_preamble": "\\usepackage{amsmath}\\usepackage{textcomp}",
+        "pinned_font_file": null
+      }
+    },
+    {
+      "group": "1988_Affleck",
+      "stem": "phase_diagram_20250626_224949",
+      "pdf_width_cm": 4.6321505059136285,
+      "fonts": [
+        "CMMI10",
+        "CMMI9",
+        "CMR7",
+        "CMR9"
+      ],
+      "page_height_cm": 5.153266415066189,
+      "all_text_rendered_with_latex": true,
+      "square_data_frames_and_pdf_spines_verified": true,
+      "roman_font_metric_bboxes_within_2pt_page_tolerance": true,
+      "template": {
+        "template": "v1_compact_square_frames_latex",
+        "text_engine": "latex",
+        "text_usetex": true,
+        "frame_pt": 1.0,
+        "axis_labels_pt": 10,
+        "ticks_pt": 9,
+        "colorbar_ticks_pt": 9,
+        "annotations_pt": 9,
+        "legends_pt": 7,
+        "page_width_cm": 4.632150544311642,
+        "page_height_cm": 5.15326637106379,
+        "font_family": "Computer Modern Roman",
+        "math_font_family": "Computer Modern Math Italic",
+        "data_frames": [
+          {
+            "bounds_figure_fraction": [
+              0.32635602625764526,
+              0.39653220293142155,
+              0.8660621467916684,
+              0.8816614044875066
+            ],
+            "width_cm": 2.5,
+            "height_cm": 2.5
+          }
+        ],
+        "colorbars": [],
+        "target_frame_side_cm": 2.5,
+        "latex_preamble": "\\usepackage{amsmath}\\usepackage{textcomp}",
+        "pinned_font_file": null
+      }
+    },
+    {
+      "group": "1988_Affleck",
+      "stem": "phase_diagram_20250626_234707",
+      "pdf_width_cm": 4.6321505059136285,
+      "fonts": [
+        "CMMI10",
+        "CMMI9",
+        "CMR7",
+        "CMR9"
+      ],
+      "page_height_cm": 5.084056599934896,
+      "all_text_rendered_with_latex": true,
+      "square_data_frames_and_pdf_spines_verified": true,
+      "roman_font_metric_bboxes_within_2pt_page_tolerance": true,
+      "template": {
+        "template": "v1_compact_square_frames_latex",
+        "text_engine": "latex",
+        "text_usetex": true,
+        "frame_pt": 1.0,
+        "axis_labels_pt": 10,
+        "ticks_pt": 9,
+        "colorbar_ticks_pt": 9,
+        "annotations_pt": 9,
+        "legends_pt": 7,
+        "page_width_cm": 4.632150544311642,
+        "page_height_cm": 5.084056655776,
+        "font_family": "Computer Modern Roman",
+        "math_font_family": "Computer Modern Math Italic",
+        "data_frames": [
+          {
+            "bounds_figure_fraction": [
+              0.33382660764589284,
+              0.3983583431449093,
+              0.8735327281799159,
+              0.8900916516554955
+            ],
+            "width_cm": 2.499999999999999,
+            "height_cm": 2.499999999999999
+          }
+        ],
+        "colorbars": [],
+        "target_frame_side_cm": 2.5,
+        "latex_preamble": "\\usepackage{amsmath}\\usepackage{textcomp}",
+        "pinned_font_file": null
+      }
+    },
+    {
+      "group": "1988_Affleck",
+      "stem": "phase_diagram_20250628_175145",
+      "pdf_width_cm": 4.69547243754069,
+      "fonts": [
+        "CMMI10",
+        "CMMI9",
+        "CMR7",
+        "CMR9",
+        "CMSY6"
+      ],
+      "page_height_cm": 5.166911146375869,
+      "all_text_rendered_with_latex": true,
+      "square_data_frames_and_pdf_spines_verified": true,
+      "roman_font_metric_bboxes_within_2pt_page_tolerance": true,
+      "template": {
+        "template": "v1_compact_square_frames_latex",
+        "text_engine": "latex",
+        "text_usetex": true,
+        "frame_pt": 1.0,
+        "axis_labels_pt": 10,
+        "ticks_pt": 9,
+        "colorbar_ticks_pt": 9,
+        "annotations_pt": 9,
+        "legends_pt": 7,
+        "page_width_cm": 4.695472456891418,
+        "page_height_cm": 5.1669109719963515,
+        "font_family": "Computer Modern Roman",
+        "math_font_family": "Computer Modern Math Italic",
+        "data_frames": [
+          {
+            "bounds_figure_fraction": [
+              0.3205019213761427,
+              0.39616887973377624,
+              0.8529297064291285,
+              0.8800169687659873
+            ],
+            "width_cm": 2.4999999999999987,
+            "height_cm": 2.499999999999999
+          }
+        ],
+        "colorbars": [],
+        "target_frame_side_cm": 2.5,
+        "latex_preamble": "\\usepackage{amsmath}\\usepackage{textcomp}",
+        "pinned_font_file": null
+      }
+    }
+  ]
+}

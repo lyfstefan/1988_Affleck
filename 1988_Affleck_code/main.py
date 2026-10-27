@@ -18,7 +18,7 @@ if __name__ == "__main__":
     save_data(data, timestamp=timestamp)
 
     filtered_data = filter_phis_by_chis(data)
-    plot_order_parameters(filtered_data)
+    plot_order_parameters(filtered_data, timestamp=timestamp)
 
     phases = classify_phases(filtered_data, chi_tol=5e-2, phi_tol=2e-1, peierls_ratio=1.1)
     plot_phase_diagram(phases, timestamp=timestamp)
